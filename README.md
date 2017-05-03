@@ -21,7 +21,7 @@ And we need to make sure that any function that is depending on a specific timer
 ### Basics
 For the sake of simplicity and availability, we will be starting from the Input module Header, as it will be the only one to always be working until we close the game. 
 To perform this in a hardcoded way (the best way), we require a pretty low amount of variables. We need to keep track of which modules will be shut down during each type of pause. For that we also need to have a list of modules and a list of types of pauses:  
-	{  
+{	
 
  `enum Modules {`  
  
@@ -50,8 +50,7 @@ Then we create a container to later decide which modules will be updated during 
 `bool pause_matrix[last_module_][last_pause_type_];`  
 `bool pause2[last_pause_type_];`  
 Finally we want every module to have a variable that controls if it's pause or not. We simply create a _*bool pause;*_ in the base module class. Now every module has its pause "button", but our system doesn't know which modules to pause or not:  
-	{
-
+{	
 `void j1Input::Init_Pause_Matrix()`  
 `{`  
   
