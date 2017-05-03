@@ -38,12 +38,11 @@ To perform this in a hardcoded way (the best way), we require a pretty low amoun
 	
 	`last_pause__`
 
-`};`
+`};`  
 
 Then we create a container to later decide which modules will be updated during pause or not, and because we are hardcoding this, a auxiliary pause that will help us in times of need:
-
-`bool pause_matrix[last_module_][last_pause_type_];`
-`bool pause2[last_pause_type_];`
+`bool pause_matrix[last_module_][last_pause_type_];`  
+`bool pause2[last_pause_type_];`  
 Finally we want every module to have a variable that controls if it's pause or not. We simply create a _*bool pause;*_ in the base module class. Now every module has its pause "button", but our system doesn't know which modules to pause or not:
 
 `void j1Input::Init_Pause_Matrix()`
@@ -56,15 +55,10 @@ Finally we want every module to have a variable that controls if it's pause or n
 		`pause2[j] = false;`
 
 	`// General Pause`
-	`{`
-		`pause_matrix[j1Collision_][General_] = true;`
-		`pause_matrix[ModuleParticles_][General_] = true;`
-	`}`
+		`pause_matrix[modules_want_to_pause_][pause_type_] = true;`
 
 	`// Inventory Pause`
-	`{`
-
-	`}`
+		`pause_matrix[modules_want_to_pause_][pause_type_] = true;`
 `}`
 
 
