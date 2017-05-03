@@ -70,9 +70,9 @@ Finally we want every module to have a variable that controls if it's pause or n
 `}`  
   
 	}  
-Before anything else let's understand how we will effectively pause the game. In short words, we don't want unnecessary "junk" to be wasting our precious computer resources while we perform certain actions, so we will avoid going through what is unnecessary.
-The main functions are 2, required to either start or stop the pause. These 2 functions are pretty similar, they both have to go through each one of the modules and either activate or deactivate the pause.
-For this we loop through a list containing all modules and changing the _*bool pause*_ value to true if that is the case.
-We also turn to true the auxiliary pause as it helps during other processes.
-These 2 functions aren't in need of returning any value.
+Before anything else let's understand how we will effectively pause the game. In short words, we don't want unnecessary "junk" to be wasting our precious computer resources while we perform certain actions, so we will avoid going through what is unnecessary.  
+The main functions are 2, required to either start or stop the pause. These 2 functions are pretty similar, they both have to go through each one of the modules and either activate or deactivate the pause.  
+For this we loop through a list containing all modules and changing the _*bool pause*_ value to true if that is the case.  
+We also turn to true the auxiliary pause as it helps during other processes.  
+These 2 functions aren't in need of returning any value.  
 
