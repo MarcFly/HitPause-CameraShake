@@ -21,7 +21,8 @@ And we need to make sure that any function that is depending on a specific timer
 ### Basics
 To perform this in a hardcoded way (the best way), we require a pretty low amount of variables. We need to keep track of which modules will be shut down during each type of pause. For that we also need to have a list of modules and a list of types of pauses:
 
-  enum Modules {
+ {
+ enum Modules {
 	  j1Window_ = 0,
 	  j1Input_,
 	  j1Render_,
@@ -51,3 +52,4 @@ To perform this in a hardcoded way (the best way), we require a pretty low amoun
 	  last_pause__
 
   };
+  }
