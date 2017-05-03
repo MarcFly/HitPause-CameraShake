@@ -21,7 +21,7 @@ And we need to make sure that any function that is depending on a specific timer
 ### Basics
 For the sake of simplicity and availability, we will be starting from the Input module Header, as it will be the only one to always be working until we close the game. 
 To perform this in a hardcoded way (the best way), we require a pretty low amount of variables. We need to keep track of which modules will be shut down during each type of pause. For that we also need to have a list of modules and a list of types of pauses:  
-{  
+	{  
 
  `enum Modules {`  
  
@@ -44,16 +44,17 @@ To perform this in a hardcoded way (the best way), we require a pretty low amoun
 
 `};`    
   
-}
+	}
 
 Then we create a container to later decide which modules will be updated during pause or not, and because we are hardcoding this, a auxiliary pause that will help us in times of need:  
 `bool pause_matrix[last_module_][last_pause_type_];`  
 `bool pause2[last_pause_type_];`  
 Finally we want every module to have a variable that controls if it's pause or not. We simply create a _*bool pause;*_ in the base module class. Now every module has its pause "button", but our system doesn't know which modules to pause or not:  
-{  
+	{
 
 `void j1Input::Init_Pause_Matrix()`  
 `{`  
+  
 	`for (int i = 0; i < last_module_; i++)`  
 		`for (int j = 0; j < last_pause_type_; j++)`  
 			`pause_matrix[i][j] = false;`  
@@ -68,7 +69,7 @@ Finally we want every module to have a variable that controls if it's pause or n
 		`pause_matrix[modules_want_to_pause_][pause_type_] = true;`  
 `}`  
   
-}  
+	}  
 Before anything else let's understand how we will effectively pause the game. In short words, we don't want unnecessary "junk" to be wasting our precious computer resources while we perform certain actions, so we will avoid going through what is unnecessary.
 The main functions are 2, required to either start or stop the pause. These 2 functions are pretty similar, they both have to go through each one of the modules and either activate or deactivate the pause.
 For this we loop through a list containing all modules and changing the _*bool pause*_ value to true if that is the case.
