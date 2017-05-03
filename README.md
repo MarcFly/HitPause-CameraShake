@@ -12,4 +12,7 @@ Given that the first videogames console (widely available for the general public
 As you may have guessed, since then, there is flose to no game that comes without a pause function, when not involving online player to player interaction.
 
 ## How to Pause a game?  
-This is fairly simple step.
+This is fairly simple step. But before anything else, we need to keep in mind the following things:
+    *A- What modules do we want to keep at every frame?
+      Which modules are required to keep running the game, for example render and input modules and clearly a core to the game.
+    *B- How are we going to catch up later?
