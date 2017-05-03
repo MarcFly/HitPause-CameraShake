@@ -50,7 +50,7 @@ Then we create a container to later decide which modules will be updated during 
 `bool pause_matrix[last_module_][last_pause_type_];`  
 `bool pause2[last_pause_type_];`  
 Finally we want every module to have a variable that controls if it's pause or not. We simply create a _*bool pause;*_ in the base module class. Now every module has its pause "button", but our system doesn't know which modules to pause or not:  
-{	
+{	  
 `void j1Input::Init_Pause_Matrix()`  
 `{`  
   
@@ -70,8 +70,10 @@ Finally we want every module to have a variable that controls if it's pause or n
   
 	}  
 Before anything else let's understand how we will effectively pause the game. In short words, we don't want unnecessary "junk" to be wasting our precious computer resources while we perform certain actions, so we will avoid going through what is unnecessary.  
-The main functions are 2, required to either start or stop the pause. These 2 functions are pretty similar, they both have to go through each one of the modules and either activate or deactivate the pause.  
+The main functions are 2, required to either start or stop the pause. These 2 functions are pretty similar, they both have to go through each one of the modules and either activate or deactivate the pause (turn true or false).  
 For this we loop through a list containing all modules and changing the _*bool pause*_ value to true if that is the case.  
 We also turn to true the auxiliary pause as it helps during other processes.  
 These 2 functions aren't in need of returning any value.  
 
+Finally we skip to the main game loop, where we call each individual update for each module and add a condition requesting if the pause value of each module allowing pass only if the value is not true (so pause is not active).
+___________________________________________________________________________________________________________________
