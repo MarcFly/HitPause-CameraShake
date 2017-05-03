@@ -79,5 +79,7 @@ Finally we skip to the main game loop, where we call each individual update for 
 ___________________________________________________________________________________________________________________
 
 ##Camera Shake
-A pretty short topic to present. Whenever you are hit in videogames, an earthqueake happens, a boss appears, someon screeches,... we get a visual confirmation of what is happenning, not only through what we are seeing (a volcano erupting or a dragon screech) but with the screen shaking from side to side, up and down,.. This is camera shake.
-![Camera Shake Example](https://media3.giphy.com/media/TqWxxYqMhocFi/giphy.gif)
+A pretty short topic to present. Whenever you are hit in videogames, an earthqueake happens, a boss appears, someon screeches,... we get a visual confirmation of what is happenning, not only through what we are seeing (a volcano erupting or a dragon screech) but with the screen shaking from side to side, up and down,.. This is camera shake.  
+!(https://media3.giphy.com/media/TqWxxYqMhocFi/giphy.gif)  
+This is fairly time consuming to get right, maybe it will never look quite right, it takes a lot of time adjusting settings to look well.
+
