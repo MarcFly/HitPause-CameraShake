@@ -77,3 +77,7 @@ These 2 functions aren't in need of returning any value.
 
 Finally we skip to the main game loop, where we call each individual update for each module and add a condition requesting if the pause value of each module allowing pass only if the value is not true (so pause is not active).
 ___________________________________________________________________________________________________________________
+
+##Camera Shake
+A pretty short topic to present. Whenever you are hit in videogames, an earthqueake happens, a boss appears, someon screeches,... we get a visual confirmation of what is happenning, not only through what we are seeing (a volcano erupting or a dragon screech) but with the screen shaking from side to side, up and down,.. This is camera shake.
+![Camera Shake Example](https://media3.giphy.com/media/TqWxxYqMhocFi/giphy.gif)
