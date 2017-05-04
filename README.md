@@ -144,3 +144,13 @@ Finally we have to create the update function for the shake:
 	}
 	
 Good Job! You now have a Camera Shake, now you only have to add the shake_ret to the camera position value you want, but only when the shake has been triggered.
+
+## Exercise:
+### Todo 1: Define the variables used to calculate the shake
+The variables mentioned beforehand, that will be used to keep track and calculate the shakiness.
+### Todo 2: Declare the 2 main functions, Activate and do the Shake
+Keep in mind that the Activate function only has to receive the values you want to change calculations with, and SHake does not need anything as we have defined the variablesin the same header and will be shared.
+### Todo 2.2: Define the Activate function
+Put the limits to the quantity and durations, you don't want infinite and absurd amounts of shakiness.
+### Todo 3: Define the Shake Function
+Hints/Explanations are in the handouts.
