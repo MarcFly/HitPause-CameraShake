@@ -24,22 +24,22 @@ To perform this in a hardcoded way (the best way), we require a pretty low amoun
 
  	enum Modules {  
  
-	j1Window_ = 0,  
-	j1Input_,  
-	j1Render_,  
-	etc...  
+		j1Window_ = 0,  
+		j1Input_,  
+		j1Render_,  
+		etc...  
 	
-	last_module_  
+		last_module_  
 	
 	};  
   
 	enum Pause_Type {  
 
-	General_ = 0,  
-	Inventory_,  
-	etc...  
+		General_ = 0,  
+		Inventory_,  
+		etc...  
   	
-	last_pause__  
+		last_pause__  
 
 	};    
 
