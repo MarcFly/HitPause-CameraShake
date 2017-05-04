@@ -89,12 +89,12 @@ For the modules that require specific attention, mainly the ones that are callin
 
 ___________________________________________________________________________________________________________________
 
-##Camera Shake
+## Camera Shake
 A pretty short topic to present. Whenever you are hit in videogames, an earthqueake happens, a boss appears, someon screeches,... we get a visual confirmation of what is happenning, not only through what we are seeing (a volcano erupting or a dragon screech) but with the screen shaking from side to side, up and down,.. This is camera shake.  
 !(https://media3.giphy.com/media/TqWxxYqMhocFi/giphy.gif)  
 This is fairly time consuming to get right, maybe it will never look quite right, it takes a lot of time adjusting settings to look well.
 
-##Implementation
+## Implementation
 Asuming you are already working with a camera in your game, that control what is being blit and what not and acts as a pivot to where things will be blit, we are basically creating a shake effect by changing this camera's position repeatedly.  
 This functions will require quite a bit of controller metrics, as we need to sync it properly to the framerate adn make is as less clanky as possible. We need basic metric to control the effect:
 
@@ -106,8 +106,10 @@ This functions will require quite a bit of controller metrics, as we need to syn
 	bool trigger_shake;	//Allow or deny the effect
 	
 Entering more in detail, the counter we will use, is in order to take care of how much time we will need. Given that we call with the duration in seconds, we need a float for short spurts of shake and the shake interval is basically a way to limit the times it is being changed from side to side.  
-But why do we need to limit how many times it is being updated? Basically we are syncing this to the program's framerate in order to get a consistent effect, if we sync it to a timer, it might sometimes return same values in terms of pair and odd numbers, so we make sure by having our own frame counter. The basic function will be updating as long as the shake is activated, but we don't want to continuously jump from side to side as it will create some visual errors. That's why we need a shake interval that along with the counter changes from side to side depending on if the frame we are currently is pair or odd, and that is a divisor of the interval, so we change from side to side but not every frame.  
-In order to achieve this we need the shake_interval to be an odd number, because when added consecutively they give odd-pair-odd-pair... series.
+But why do we need to limit how many times it is being updated? Basically we are syncing this to the program's framerate in order to get a consistent effect, if we sync it to a timer, it might sometimes return same values in terms of pair and odd numbers, so we make sure by having our own frame counter.  
+
+The basic function will be updating as long as the shake is activated, but we don't want to continuously jump from side to side as it will create some visual errors. That's the reason we need a shake interval that with the counter changes from side to side depending on if the frame we are currently on is pair or odd, so we change from side to side but not every frame.  
+In order to achieve this we need the shake_interval to be an odd number, because when added consecutively they give odd-pair-odd-pair... series.  
 
 Whenever we want to start a camera shake, we need to activate it giving him the strength and duration desired. As we already planned to have the shake updated every frame while activated, we only need to feed him the values that change the effect. Then this will put the values in the previously created protected variables.
 	
