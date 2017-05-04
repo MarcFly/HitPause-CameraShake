@@ -111,3 +111,34 @@ In order to achieve this we need the shake_interval to be an odd number, because
 
 Whenever we want to start a camera shake, we need to activate it giving him the strength and duration desired. As we already planned to have the shake updated every frame while activated, we only need to feed him the values that change the effect. Then this will put the values in the previously created protected variables.
 	
+	void Activate_Shake(float quantity_, float duration_){
+		//assign corresponding values
+		//initiate counter to 0 and put the shake_interval to an odd number (3 is the best result so far)
+		//turn trigger_shake to true to "activate" the shake
+		
+		//Some values will be either too big or small, I suggest you put a limit to them
+		//For example I limit to 100 and use a scale from 1 to 100 for the quantity and limit the duration to 10sec
+	}
+	
+Finally we have to create the update function for the shake:
+
+	void Camera_Shake(){
+		//update the counter each time it enters
+		
+		//While making the loop, take into account that we only want to switch sides every x frames
+		//We need to measure if x frames have passed easily
+			//We check if the current frame is pair or odd and then decide to which side we are shaking
+		
+		//If X frames have not passed, we still have to update the shake, but in the direction we were shaking previously
+			//Check if shake_ret was negative or positive, as easy as that
+			//Then update shake_ret accordingly
+			
+		//Now we update the quantity, as we want to smooth out the
+		//Basically we want to keep reducing the quantity of shakiness as time goes by
+		
+		//Check that the counter is over the duration, keeping in mind that you input duration in seonds
+			//If so reset all variables, including shake_ret
+			
+	}
+	
+Good Job! You now have a Camera Shake, now you only have to add the shake_ret to the camera position value you want, but only when the shake has been triggered.
