@@ -120,6 +120,9 @@ Whenever we want to start a camera shake, we need to activate it giving him the 
 		
 		//Some values will be either too big or small, I suggest you put a limit to them
 		//For example I limit to 100 and use a scale from 1 to 100 for the quantity and limit the duration to 10sec
+		//The shake interval has to be calculated related to the quantity and duration
+		//The more duration you have, the more updates you need at a time
+		//The more quantity you have, the less updates you need
 	}
 	
 Finally we have to create the update function for the shake:
