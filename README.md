@@ -7,8 +7,8 @@ A part from a graphical effect, it can be used in order to give the user a small
 ![Guilty Gear Combo](https://justicesoultuna.files.wordpress.com/2013/05/ibfumz81jvoma6.gif)  
 
 ## Implementantion
-During a base hit pause, you are stopping the game logic for a couple frames, only projecting a specific frame. In other words, you will be blitting a specific frame over and over during a certain amount of time, then continuing the action.
-__________________________________________________________________________________________________________
+During a base hit pause, you are stopping the game logic for a couple frames, only projecting a specific frame. In other words, you will be blitting a specific frame over and over during a certain amount of time, then continuing the action.  
+_________________________________________________________________________________________________________________________
 ## Camera Shake
 A pretty short topic to present. Whenever you are hit in videogames, an earthqueake happens, a boss appears, someon screeches,... we get a visual confirmation of what is happenning, not only through what we are seeing (a volcano erupting or a dragon screech) but with the screen shaking from side to side, up and down,.. This is camera shake.  
 ![Camera Shake GIF](https://media3.giphy.com/media/TqWxxYqMhocFi/giphy.gif)  
