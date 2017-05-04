@@ -2,7 +2,7 @@
 # Hit-Pause
 The Hit-Pause is a graphical effect that is done in order to emphasize a specific action, normally accompained by different visual On-Hit effects:  
 ![Hit Pause Example](https://i.makeagif.com/media/5-25-2015/15o23B.gif)  
-![Hit Pause Example 2](http://rivalsofaether.com/blog/wp-content/uploads/2015/05/big_hit_gif.gif)  
+![Hit Pause Example 2](https://metrouk2.files.wordpress.com/2016/08/mario-strikers-charged.gif?w=620&h=349&crop=1)  
 
 A part from a graphical effect, it can be used in order to give the user a small window of time to decide and input its next action, also called buffer time. Most fighting games feature this in order to perform buffered action to make easier the connection of different moves:  
 ![Karen Combo](https://media.giphy.com/media/3o85gbdVDqEOMcmReU/giphy.gif)
