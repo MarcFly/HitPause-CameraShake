@@ -77,15 +77,15 @@ Now we start workign on the main game loop, where we call each individual update
 
 For the modules that require specific attention, mainly the ones that are calling a draw function to show things on screen, we do the good old conditional and only let out the draw.
 
-`bool ModuleX::Update(){`
+	bool ModuleX::Update(){
 
-	`if(pause2[pause_type_] == false)`
-	`{`
-		`//Allow the update if there is no pause active...`
-	`}`
-	`ToDraw(...)`
-	`return ret;`
-`}`
+		if(pause2[pause_type_] == false)
+		{
+			//Allow the update if there is no pause active...
+		}
+		ToDraw(...)
+		return ret;
+	}
 
 ___________________________________________________________________________________________________________________
 
