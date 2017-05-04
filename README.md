@@ -2,14 +2,16 @@
 ## Hit-Pause
 The Hit-Pause is a graphical effect that is done in order to emphasize a specific action, normally accompained by different visual On-Hit effects:  
 ![Hit Pause Example](https://i.makeagif.com/media/5-25-2015/15o23B.gif)  
-![Hit Pause Example 2](http://rivalsofaether.com/blog/wp-content/uploads/2015/05/big_hit_gif.gif)
+![Hit Pause Example 2](http://rivalsofaether.com/blog/wp-content/uploads/2015/05/big_hit_gif.gif)  
+
 A part from a graphical effect, it can be used in order to give the user a small window of time to decide and input its next action, also called buffer time. Most fighting games feature this in order to perform buffered action to make easier the connection of different moves:  
 ![Karen Combo](https://media.giphy.com/media/3o85gbdVDqEOMcmReU/giphy.gif)
 ![Guilty Gear Combo](https://justicesoultuna.files.wordpress.com/2013/05/ibfumz81jvoma6.gif)  
-
+  
 ## Implementantion
 During a base hit pause, you are stopping the game logic for a couple frames, only projecting a specific frame. In other words, you will be blitting a specific frame over and over during a certain amount of time, then continuing the action.  
 ***
+  
 ## Camera Shake
 A pretty short topic to present. Whenever you are hit in videogames, an earthqueake happens, a boss appears, someon screeches,... we get a visual confirmation of what is happenning, not only through what we are seeing (a volcano erupting or a dragon screech) but with the screen shaking from side to side, up and down,.. This is camera shake.  
 ![Camera Shake GIF](https://media3.giphy.com/media/TqWxxYqMhocFi/giphy.gif)  
